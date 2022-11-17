@@ -1,0 +1,162 @@
+
+ /* “universal” CSS selector (*): */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.page {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.pages{
+  width: 224px;
+  margin: 0 auto;
+}
+/* <h1> and <p> are block-level elements, while <em> and <strong> are inline elements.  */
+h1, p { /* background-color property only fills in the background of the selected box */
+  background-color: #DDE0E3;    /* Light gray */
+}
+
+h1 {
+  padding: 50px;
+  border: 1px solid #5D6063;
+}
+
+p {
+  padding: 20px 0 20px 10px;  /* Top  Right  Bottom  Left */
+  margin-top: 25px;
+  margin-bottom: 50px;  
+}
+h2 {
+  font-size: 30px;
+  color: #FFF;
+  background-color: #5995DA;
+  padding: 50px;
+  border: 2px solid #5D6063;
+  border-radius: 5px;
+
+  width: 500px;
+  box-sizing: border-box;
+  margin: 20px auto;
+}
+
+em, strong { /* emphasis and strong elements should be light blue */
+  background-color: #B2D6FF;    /* Light blue */
+  display: inline; /* This is the default for em and strong */
+ 
+}
+
+strong {
+  /*margin: 50px;*/
+  background-color: #9ACD32;
+}
+
+/* div {
+  color: #FFF;
+  background-color: #5995DA;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #5D6063;
+  border-radius: 5px;
+
+  width: 200px;
+  box-sizing: border-box;
+  margin: 20px auto;  /* Vertical  Horizontal (centers the button)
+} */ 
+
+
+#animal {
+    text-align: center;
+}
+.paragraph {
+    text-align: center;
+}
+.points{
+    text-align: center;
+}
+li::marker {
+  text-align: center;
+}
+
+.button:link,
+.button:visited {
+  display: block;
+  text-decoration: none;
+
+  color: #FFF;
+  background-color: #5995DA;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #5D6063;
+  border-radius: 5px;
+
+  width: 200px;
+  margin: 20px auto;
+}
+
+.button:hover,
+.button:visited:hover {
+  color: #FFF;
+  background-color: #76AEED;  /* Light blue */
+}
+
+.button:active,
+.button:visited:active {
+  color: #FFF;
+  background-color: #5995DA;  /* Blue */
+}
+.bar{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+.navigation{
+  display: inline;
+  float: left;
+  border-right: 1px solid #bbb;
+}
+.navigation:last-child {
+  border-right: none;
+}
+.horizontal{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.horizontal:hover{
+  background-color: #111;
+}
+
+.cards {
+  display:flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: row;
+  height: 200vh;
+  justify-content: space-between
+}
+
+.cards img {
+  margin: 10px;
+  border: 3px solid #000;
+  box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3);
+  width: 30vh;
+  height: 30vh;
+}
+
+@media only screen and (max-width: 400px) {
+  .cards {
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    align-content: space-around;
+  }
+}
